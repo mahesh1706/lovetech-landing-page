@@ -39,9 +39,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-playfair font-bold text-brand-black">
-              Petluri <span className="text-brand-blue">EduTech</span>
-            </div>
+            <img 
+              src="/lovable-uploads/0bc6fa45-e0cd-4332-a9d1-5e406071306d.png" 
+              alt="Petluri EduTech" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

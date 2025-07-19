@@ -2,25 +2,26 @@
 import { useState } from 'react';
 import { coursesData } from '@/data/coursesData';
 import CourseCard from './CourseCard';
-import CourseEnquiryModal from './CourseEnquiryModal';
+import CourseDetailsModal from './CourseDetailsModal';
+import { Course } from '@/data/coursesData';
 
 const Courses = () => {
-  const [enquiryModal, setEnquiryModal] = useState({
+  const [detailsModal, setDetailsModal] = useState({
     isOpen: false,
-    selectedCourse: ''
+    selectedCourse: null as Course | null
   });
 
-  const handleEnquireClick = (courseTitle: string) => {
-    setEnquiryModal({
+  const handleViewDetails = (course: Course) => {
+    setDetailsModal({
       isOpen: true,
-      selectedCourse: courseTitle
+      selectedCourse: course
     });
   };
 
-  const closeEnquiryModal = () => {
-    setEnquiryModal({
+  const closeDetailsModal = () => {
+    setDetailsModal({
       isOpen: false,
-      selectedCourse: ''
+      selectedCourse: null
     });
   };
 
@@ -73,7 +74,7 @@ const Courses = () => {
               key={course.id}
               course={course}
               index={index}
-              onEnquireClick={handleEnquireClick}
+              onViewDetails={handleViewDetails}
             />
           ))}
         </div>
@@ -111,11 +112,11 @@ const Courses = () => {
         </div>
       </div>
 
-      {/* Course Enquiry Modal */}
-      <CourseEnquiryModal
-        isOpen={enquiryModal.isOpen}
-        onClose={closeEnquiryModal}
-        selectedCourse={enquiryModal.selectedCourse}
+      {/* Course Details Modal */}
+      <CourseDetailsModal
+        isOpen={detailsModal.isOpen}
+        onClose={closeDetailsModal}
+        course={detailsModal.selectedCourse}
       />
     </section>
   );

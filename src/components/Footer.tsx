@@ -35,8 +35,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="text-2xl font-playfair font-bold text-brand-black mb-4">
-              Petluri <span className="text-brand-blue">EduTech</span>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/0bc6fa45-e0cd-4332-a9d1-5e406071306d.png" 
+                alt="Petluri EduTech" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Industry-leading technical training for colleges and institutions. 
