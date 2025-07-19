@@ -4,20 +4,20 @@ import { Linkedin, Mail } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: "Rajesh Petluri",
-      position: "Founder & CEO",
-      bio: "15+ years of industry experience in EdTech and corporate training. Former Tech Lead at Fortune 500 companies, passionate about bridging the skill gap in technical education.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      name: "Dr. Ravikiran Petluri",
+      position: "Founder",
+      bio: "Dr. Ravikiran Petluri, the visionary behind Petluri Edu-Tech (OPC) India Pvt Ltd, brings a wealth of knowledge and experience to the field of education and technology. With an impressive academic background, including an MBA in Finance & Systems, M.Com, M.Phil., and PhD in Finance, Dr. Petluri has dedicated over 12 years to both academics and the corporate world. His expertise in technical analysis and critical thinking ensures a comprehensive and enriching learning experience for students, job seekers, and professionals. At Petluri Edu-Tech, Dr. Petluri's mission is to empower individuals with the skills and knowledge needed to excel in today's competitive landscape.",
+      image: "/lovable-uploads/e61e3d2d-1d12-4d7e-b24d-db9ae7d44fe6.png",
       linkedin: "#",
-      email: "rajesh@petluriedutech.com"
+      email: "ravikiran@petluriedutech.com"
     },
     {
-      name: "Priya Sharma",
-      position: "Director of Operations",
-      bio: "MBA with 12+ years in educational program management and curriculum development. Expert in scaling training programs and ensuring quality delivery across multiple institutions.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b605?w=400&h=400&fit=crop&crop=face",
+      name: "Mrs. Prameela R",
+      position: "Director",
+      bio: "Mrs. Prameela R, the esteemed Director of Petluri Edu-Tech (OPC) India Pvt Ltd, holds an M.Sc. in Mass Communications and brings 8 years of extensive experience to the organization. Her expertise in mass communications and her dedication to fostering effective communication skills are invaluable assets to the Company. Prameela's leadership and vision contribute significantly to the development and delivery of high-quality educational programs. Her commitment to excellence ensures that Petluri Edu-Tech provides top-notch training and support to students, job seekers, and professionals, helping them to achieve their career aspirations and excel in their respective fields.",
+      image: "/lovable-uploads/e61e3d2d-1d12-4d7e-b24d-db9ae7d44fe6.png",
       linkedin: "#",
-      email: "priya@petluriedutech.com"
+      email: "prameela@petluriedutech.com"
     }
   ];
 
@@ -48,7 +48,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover object-center"
                 />
               </div>
               
@@ -61,7 +61,7 @@ const Team = () => {
                   {member.position}
                 </p>
                 
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-6 text-sm">
                   {member.bio}
                 </p>
                 
