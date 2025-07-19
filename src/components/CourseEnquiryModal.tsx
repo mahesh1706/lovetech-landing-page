@@ -89,29 +89,30 @@ Thank you!
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div 
-        className="bg-white rounded-3xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-100"
+        className="bg-white rounded-2xl sm:rounded-3xl w-full max-w-md max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-100 mx-4"
         data-aos="zoom-in"
         data-aos-duration="300"
       >
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-4 sm:mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-yellow rounded-xl flex items-center justify-center">
-                <GraduationCap className="text-white" size={24} />
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-r from-brand-blue to-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                <GraduationCap className="text-white" size={20} />
               </div>
-              <div>
-                <h3 className="text-xl font-playfair font-bold text-brand-black">
+              <div className="min-w-0 flex-1">
+                <h3 className="text-lg sm:text-xl font-playfair font-bold text-brand-black truncate">
                   Course Enquiry
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 truncate">
                   {selectedCourse}
                 </p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-xl transition-colors duration-200 group"
+              className="p-2 hover:bg-gray-100 rounded-xl transition-colors duration-200 group flex-shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-label="Close modal"
             >
               <X size={20} className="text-gray-500 group-hover:text-gray-700" />
             </button>
@@ -129,7 +130,7 @@ Thank you!
                 value={formData.collegeName}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200 min-h-[44px]"
                 placeholder="Enter your institution name"
               />
             </div>
@@ -144,12 +145,12 @@ Thank you!
                 value={formData.enquirerName}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200 min-h-[44px]"
                 placeholder="Your full name"
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-brand-black mb-2">
                   Mobile Number *
@@ -160,7 +161,7 @@ Thank you!
                   value={formData.mobile}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200 min-h-[44px]"
                   placeholder="+91 XXXXX XXXXX"
                 />
               </div>
@@ -176,7 +177,7 @@ Thank you!
                   onChange={handleInputChange}
                   required
                   min="1"
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200 min-h-[44px]"
                   placeholder="50"
                 />
               </div>
@@ -192,7 +193,7 @@ Thank you!
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20 outline-none transition-all duration-200 min-h-[44px]"
                 placeholder="email@example.com"
               />
             </div>
@@ -214,7 +215,7 @@ Thank you!
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02]"
+              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] min-h-[48px]"
             >
               <Send size={20} />
               {isSubmitting ? 'Sending...' : 'Send WhatsApp Message'}
@@ -222,7 +223,7 @@ Thank you!
           </form>
 
           <div className="mt-4 text-center">
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 px-2">
               Your enquiry will be sent directly to our WhatsApp for immediate assistance
             </p>
           </div>
