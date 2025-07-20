@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-brand-black">Phone</div>
-                  <div className="text-gray-600">+91 77889 90099</div>
+                  <div className="text-gray-600">+91 90082 91433</div>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-brand-black">Email</div>
-                  <div className="text-gray-600">info@petluriedutech.com</div>
+                  <div className="text-gray-600">director@petluriedutech.com</div>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-brand-black">Location</div>
-                  <div className="text-gray-600">Hyderabad, Telangana, India</div>
+                  <div className="text-gray-600">26, Muthasandra, Mayasandra Post, Anekal Taluk, Attibele Hobli, Bangalore - 562107</div>
                 </div>
               </div>
 

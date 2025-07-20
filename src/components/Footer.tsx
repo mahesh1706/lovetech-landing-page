@@ -110,15 +110,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-blue" />
-                <span className="text-gray-600">+91 77889 90099</span>
+                <span className="text-gray-600">+91 90082 91433</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-blue" />
-                <span className="text-gray-600">info@petluriedutech.com</span>
+                <span className="text-gray-600">director@petluriedutech.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin size={18} className="text-brand-blue" />
-                <span className="text-gray-600">Hyderabad, Telangana</span>
+                <MapPin size={45} className="text-brand-blue" />
+                <span className="text-gray-600">26, Muthasandra, Mayasandra Post, Anekal Taluk, Attibele Hobli, Bangalore - 562107</span>
               </div>
             </div>
 
