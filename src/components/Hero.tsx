@@ -3,7 +3,7 @@ import { ArrowRight, Play } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-off-white to-white pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-off-white via-white to-brand-blue-light/5 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="text-center lg:text-left" data-aos="fade-right">
@@ -54,35 +54,35 @@ const Hero = () => {
         <div className="relative" data-aos="fade-left">
           <div className="relative w-full h-96 lg:h-[500px]">
             {/* Course floating elements */}
-            <div className="absolute top-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-float">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-2">
+            <div className="absolute top-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-blue/10">
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/20 to-brand-blue/30 rounded-lg flex items-center justify-center mb-2">
                 📊
               </div>
-              <div className="text-sm font-semibold">Excel Analytics</div>
+              <div className="text-sm font-semibold text-brand-black">Excel Analytics</div>
             </div>
             
-            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '0.5s' }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-yellow/20" style={{ animationDelay: '0.5s' }}>
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-lg flex items-center justify-center mb-2">
                 📱
               </div>
-              <div className="text-sm font-semibold">Digital Marketing</div>
+              <div className="text-sm font-semibold text-brand-black">Digital Marketing</div>
             </div>
             
-            <div className="absolute bottom-32 left-20 bg-white p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
+            <div className="absolute bottom-32 left-20 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-blue/10" style={{ animationDelay: '1s' }}>
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue-light/20 to-brand-blue/20 rounded-lg flex items-center justify-center mb-2">
                 📈
               </div>
-              <div className="text-sm font-semibold">Power BI</div>
+              <div className="text-sm font-semibold text-brand-black">Power BI</div>
             </div>
             
-            <div className="absolute bottom-20 right-20 bg-white p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '1.5s' }}>
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-2">
+            <div className="absolute bottom-20 right-20 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-yellow/20" style={{ animationDelay: '1.5s' }}>
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow-light/20 to-brand-yellow/20 rounded-lg flex items-center justify-center mb-2">
                 💻
               </div>
-              <div className="text-sm font-semibold">Web Development</div>
+              <div className="text-sm font-semibold text-brand-black">Web Development</div>
             </div>
             
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-brand-blue to-brand-yellow p-8 rounded-2xl shadow-2xl animate-float" style={{ animationDelay: '0.25s' }}>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-brand-blue to-brand-yellow p-8 rounded-2xl shadow-2xl animate-float" style={{ animationDelay: '0.25s', boxShadow: 'var(--shadow-elegant)' }}>
               <div className="text-center text-white">
                 <div className="text-3xl font-bold mb-2">9</div>
                 <div className="text-sm">Premium Courses</div>

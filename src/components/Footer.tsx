@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-brand-off-white">
+    <footer className="bg-gradient-to-b from-brand-off-white to-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -49,11 +49,11 @@ const Footer = () => {
             
             {/* Certifications */}
             <div className="flex gap-4 mb-6">
-              <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-white to-brand-blue/5 px-3 py-2 rounded-lg shadow-sm border border-brand-blue/20">
                 <span className="text-sm">🏭</span>
                 <span className="text-xs font-medium text-brand-black">MSME</span>
               </div>
-              <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-white to-brand-yellow/5 px-3 py-2 rounded-lg shadow-sm border border-brand-yellow/20">
                 <span className="text-sm">🚀</span>
                 <span className="text-xs font-medium text-brand-black">Startup India</span>
               </div>
@@ -61,13 +61,13 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-brand-blue text-white rounded-lg flex items-center justify-center hover:bg-opacity-90 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white rounded-lg flex items-center justify-center hover:scale-105 transition-all duration-200">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-brand-blue text-white rounded-lg flex items-center justify-center hover:bg-opacity-90 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white rounded-lg flex items-center justify-center hover:scale-105 transition-all duration-200">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-brand-blue text-white rounded-lg flex items-center justify-center hover:bg-opacity-90 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white rounded-lg flex items-center justify-center hover:scale-105 transition-all duration-200">
                 <Instagram size={18} />
               </a>
             </div>
@@ -125,7 +125,7 @@ const Footer = () => {
             <div className="mt-6">
               <button
                 onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-                className="w-full bg-brand-yellow text-brand-black px-4 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                className="w-full bg-gradient-to-r from-brand-yellow to-brand-yellow-light text-brand-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-200"
               >
                 WhatsApp Enquiry
               </button>

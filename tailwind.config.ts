@@ -53,12 +53,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Brand Colors
+				// Enhanced Brand Colors using CSS variables
 				brand: {
-					black: '#222222',
-					yellow: '#E0AC43',
-					'off-white': '#F5F5F5',
-					blue: '#3A7DFF'
+					black: 'hsl(var(--brand-black))',
+					yellow: 'hsl(var(--brand-yellow))',
+					'yellow-light': 'hsl(var(--brand-yellow-light))',
+					'yellow-dark': 'hsl(var(--brand-yellow-dark))',
+					'off-white': 'hsl(var(--brand-off-white))',
+					blue: 'hsl(var(--brand-blue))',
+					'blue-light': 'hsl(var(--brand-blue-light))',
+					'blue-dark': 'hsl(var(--brand-blue-dark))'
+				},
+				// Gradient utilities
+				gradient: {
+					primary: 'var(--gradient-primary)',
+					secondary: 'var(--gradient-secondary)',
+					accent: 'var(--gradient-accent)'
 				}
 			},
 			fontFamily: {

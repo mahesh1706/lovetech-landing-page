@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white to-brand-off-white/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -30,8 +30,8 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white to-brand-blue/5 rounded-xl border border-brand-blue/20 hover:border-brand-blue/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/10 to-brand-blue/20 rounded-xl flex items-center justify-center">
                   <Phone className="w-6 h-6 text-brand-blue" />
                 </div>
                 <div>
@@ -40,9 +40,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-yellow/20 rounded-xl flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-brand-black" />
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white to-brand-yellow/5 rounded-xl border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-xl flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-brand-yellow-dark" />
                 </div>
                 <div>
                   <div className="font-semibold text-brand-black">Email</div>
@@ -50,8 +50,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white to-brand-blue/5 rounded-xl border border-brand-blue/20 hover:border-brand-blue/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/10 to-brand-blue/20 rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-brand-blue" />
                 </div>
                 <div>
@@ -60,9 +60,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-yellow/20 rounded-xl flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-brand-black" />
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white to-brand-yellow/5 rounded-xl border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-xl flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-brand-yellow-dark" />
                 </div>
                 <div>
                   <div className="font-semibold text-brand-black">Business Hours</div>
@@ -74,7 +74,7 @@ const Contact = () => {
             <div className="pt-8">
               <button
                 onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-                className="w-full bg-brand-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-brand-blue to-brand-blue-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-200 transform"
               >
                 Start WhatsApp Conversation
               </button>
@@ -82,7 +82,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-brand-off-white rounded-2xl p-8" data-aos="fade-left">
+          <div className="bg-gradient-to-br from-brand-off-white to-white rounded-2xl p-8 border border-brand-blue/10" data-aos="fade-left" style={{ boxShadow: 'var(--shadow-blue)' }}>
             <h3 className="text-2xl font-playfair font-bold text-brand-black mb-6">
               Send us a Message
             </h3>
@@ -166,7 +166,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-brand-yellow text-brand-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-brand-yellow to-brand-yellow-light text-brand-black px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-200 transform"
               >
                 Send Message
               </button>
