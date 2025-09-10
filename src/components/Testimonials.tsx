@@ -49,7 +49,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-brand-off-white/30">
+    <section id="testimonials" className="py-20 gradient-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -64,11 +64,11 @@ const Testimonials = () => {
 
         {/* Testimonial Carousel */}
         <div className="relative max-w-4xl mx-auto" data-aos="fade-up">
-          <div className="bg-gradient-to-br from-white to-brand-off-white/50 rounded-2xl p-8 lg:p-12 min-h-[300px] flex items-center border border-brand-blue/10" style={{ boxShadow: 'var(--shadow-blue)' }}>
+          <div className="bg-gradient-to-br from-white to-brand-off-white/50 rounded-2xl p-8 lg:p-12 min-h-[300px] flex items-center border border-brand-blue/10 glow-elegant">
             <div className="w-full">
               {testimonials[currentTestimonial].type === 'video' ? (
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-brand-blue to-brand-yellow w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-6 cursor-pointer hover:scale-105 transition-transform">
+                  <div className="bg-gradient-to-br from-brand-blue to-brand-yellow w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-6 cursor-pointer hover:scale-105 transition-transform glow-elegant">
                     <Play size={48} className="text-white ml-2" />
                   </div>
                   <h3 className="text-2xl font-playfair font-bold text-brand-black mb-2">
@@ -117,14 +117,14 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white p-3 rounded-full glow-blue hover:scale-110 transition-all duration-300"
           >
             <ChevronLeft size={24} />
           </button>
           
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white p-3 rounded-full glow-blue hover:scale-110 transition-all duration-300"
           >
             <ChevronRight size={24} />
           </button>
@@ -145,16 +145,16 @@ const Testimonials = () => {
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20" data-aos="fade-up" data-aos-delay="100">
-            <div className="text-4xl font-bold text-brand-blue mb-2">95%</div>
+          <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20 glow-soft hover:glow-blue transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div className="text-4xl font-bold text-brand-blue mb-2 text-glow-blue">95%</div>
             <div className="text-gray-600">Placement Success Rate</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 p-6 rounded-xl border border-brand-yellow/20" data-aos="fade-up" data-aos-delay="200">
-            <div className="text-4xl font-bold text-brand-yellow-dark mb-2">4.9/5</div>
+          <div className="text-center bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 p-6 rounded-xl border border-brand-yellow/20 glow-yellow hover:glow-yellow transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div className="text-4xl font-bold text-brand-yellow-dark mb-2 text-glow-yellow">4.9/5</div>
             <div className="text-gray-600">Average Rating</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20" data-aos="fade-up" data-aos-delay="300">
-            <div className="text-4xl font-bold text-brand-blue mb-2">100%</div>
+          <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20 glow-soft hover:glow-blue transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div className="text-4xl font-bold text-brand-blue mb-2 text-glow-blue">100%</div>
             <div className="text-gray-600">Course Completion</div>
           </div>
         </div>

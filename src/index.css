@@ -210,14 +210,74 @@ All colors MUST be HSL.
   }
 }
 
-/* Premium glow effects */
-.premium-glow {
-  box-shadow: 0 0 20px rgba(58, 125, 255, 0.1);
+/* Professional Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 20px hsl(var(--brand-blue) / 0.3);
   transition: box-shadow 0.3s ease;
 }
 
-.premium-glow:hover {
-  box-shadow: 0 0 40px rgba(58, 125, 255, 0.2);
+.glow-blue:hover {
+  box-shadow: 0 0 40px hsl(var(--brand-blue) / 0.5);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px hsl(var(--brand-yellow) / 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-yellow:hover {
+  box-shadow: 0 0 40px hsl(var(--brand-yellow) / 0.6);
+}
+
+.glow-elegant {
+  box-shadow: 0 10px 40px -15px hsl(var(--brand-blue) / 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-elegant:hover {
+  box-shadow: 0 20px 60px -15px hsl(var(--brand-blue) / 0.4);
+}
+
+.glow-soft {
+  box-shadow: 0 4px 20px hsl(var(--brand-blue) / 0.15);
+  transition: all 0.3s ease;
+}
+
+.glow-soft:hover {
+  box-shadow: 0 8px 30px hsl(var(--brand-blue) / 0.25);
+  transform: translateY(-2px);
+}
+
+/* Gradient Backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, 
+    hsl(var(--brand-off-white)) 0%,
+    hsl(var(--brand-blue) / 0.02) 25%,
+    hsl(var(--brand-yellow) / 0.03) 50%,
+    hsl(var(--brand-blue) / 0.05) 75%,
+    hsl(var(--brand-off-white)) 100%);
+}
+
+.gradient-section {
+  background: linear-gradient(180deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--brand-off-white) / 0.3) 50%,
+    hsl(var(--background)) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(145deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--brand-blue) / 0.02) 100%);
+}
+
+/* Text Glow Effects */
+.text-glow-blue {
+  text-shadow: 0 0 10px hsl(var(--brand-blue) / 0.3);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 10px hsl(var(--brand-yellow) / 0.4);
 }
 
 /* Mobile-specific improvements */

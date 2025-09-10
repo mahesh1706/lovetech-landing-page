@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-brand-off-white to-white">
+    <footer className="bg-gradient-to-b from-brand-off-white via-white to-brand-blue/5">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -125,7 +125,7 @@ const Footer = () => {
             <div className="mt-6">
               <button
                 onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-                className="w-full bg-gradient-to-r from-brand-yellow to-brand-yellow-light text-brand-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-200"
+                className="w-full bg-gradient-to-r from-brand-yellow to-brand-yellow-light text-brand-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300 glow-yellow"
               >
                 WhatsApp Enquiry
               </button>

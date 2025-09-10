@@ -3,14 +3,14 @@ import { ArrowRight, Play } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-off-white via-white to-brand-blue-light/5 pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center gradient-hero pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="text-center lg:text-left" data-aos="fade-right">
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-playfair font-bold text-brand-black mb-6 leading-tight">
             Industry-Leading
-            <span className="block text-brand-blue">Technical Training</span>
-            <span className="block text-brand-yellow">for Colleges</span>
+            <span className="block text-brand-blue text-glow-blue">Technical Training</span>
+            <span className="block text-brand-yellow text-glow-yellow">for Colleges</span>
           </h1>
           
           <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
@@ -21,13 +21,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button
               onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-              className="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+              className="bg-gradient-to-r from-brand-blue to-brand-blue-light text-white px-8 py-4 rounded-full font-semibold text-lg glow-blue hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               Talk to Us on WhatsApp
               <ArrowRight size={20} />
             </button>
             
-            <button className="border-2 border-brand-black text-brand-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-black hover:text-white transition-all duration-200 flex items-center justify-center gap-2">
+            <button className="border-2 border-brand-black text-brand-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gradient-to-r hover:from-brand-black hover:to-gray-800 hover:text-white hover:border-transparent glow-soft transition-all duration-300 flex items-center justify-center gap-2">
               <Play size={20} />
               Watch Demo
             </button>
@@ -54,37 +54,37 @@ const Hero = () => {
         <div className="relative" data-aos="fade-left">
           <div className="relative w-full h-96 lg:h-[500px]">
             {/* Course floating elements */}
-            <div className="absolute top-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-blue/10">
+            <div className="absolute top-10 left-10 bg-white p-4 rounded-xl glow-soft animate-float border border-brand-blue/10">
               <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/20 to-brand-blue/30 rounded-lg flex items-center justify-center mb-2">
                 📊
               </div>
               <div className="text-sm font-semibold text-brand-black">Excel Analytics</div>
             </div>
             
-            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-yellow/20" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl glow-soft animate-float border border-brand-yellow/20" style={{ animationDelay: '0.5s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-lg flex items-center justify-center mb-2">
                 📱
               </div>
               <div className="text-sm font-semibold text-brand-black">Digital Marketing</div>
             </div>
             
-            <div className="absolute bottom-32 left-20 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-blue/10" style={{ animationDelay: '1s' }}>
+            <div className="absolute bottom-32 left-20 bg-white p-4 rounded-xl glow-soft animate-float border border-brand-blue/10" style={{ animationDelay: '1s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-brand-blue-light/20 to-brand-blue/20 rounded-lg flex items-center justify-center mb-2">
                 📈
               </div>
               <div className="text-sm font-semibold text-brand-black">Power BI</div>
             </div>
             
-            <div className="absolute bottom-20 right-20 bg-white p-4 rounded-xl shadow-lg animate-float border border-brand-yellow/20" style={{ animationDelay: '1.5s' }}>
+            <div className="absolute bottom-20 right-20 bg-white p-4 rounded-xl glow-soft animate-float border border-brand-yellow/20" style={{ animationDelay: '1.5s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow-light/20 to-brand-yellow/20 rounded-lg flex items-center justify-center mb-2">
                 💻
               </div>
               <div className="text-sm font-semibold text-brand-black">Web Development</div>
             </div>
             
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-brand-blue to-brand-yellow p-8 rounded-2xl shadow-2xl animate-float" style={{ animationDelay: '0.25s', boxShadow: 'var(--shadow-elegant)' }}>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-brand-blue to-brand-yellow p-8 rounded-2xl glow-elegant animate-float" style={{ animationDelay: '0.25s' }}>
               <div className="text-center text-white">
-                <div className="text-3xl font-bold mb-2">9</div>
+                <div className="text-3xl font-bold mb-2 text-glow-blue">9</div>
                 <div className="text-sm">Premium Courses</div>
               </div>
             </div>

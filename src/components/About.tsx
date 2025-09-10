@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white to-brand-off-white/50">
+    <section id="about" className="py-20 gradient-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -44,18 +44,18 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border ${
+              className={`text-center p-6 rounded-xl transition-all duration-300 transform hover:-translate-y-2 border ${
                 index % 2 === 0 
-                  ? 'bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 border-brand-blue/20 hover:border-brand-blue/40' 
-                  : 'bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 border-brand-yellow/20 hover:border-brand-yellow/40'
+                  ? 'bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 border-brand-blue/20 hover:border-brand-blue/40 glow-soft' 
+                  : 'bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 border-brand-yellow/20 hover:border-brand-yellow/40 glow-yellow'
               }`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl mb-4 ${
                 index % 2 === 0 
-                  ? 'bg-gradient-to-br from-brand-blue/10 to-brand-blue/20 text-brand-blue' 
-                  : 'bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 text-brand-yellow-dark'
+                  ? 'bg-gradient-to-br from-brand-blue/10 to-brand-blue/20 text-brand-blue glow-blue' 
+                  : 'bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 text-brand-yellow-dark glow-yellow'
               }`}>
                 {feature.icon}
               </div>
@@ -70,7 +70,7 @@ const About = () => {
         </div>
 
         {/* Certifications */}
-        <div className="bg-gradient-to-br from-brand-off-white to-white rounded-2xl p-8 lg:p-12 border border-brand-blue/10" data-aos="fade-up" style={{ boxShadow: 'var(--shadow-blue)' }}>
+        <div className="bg-gradient-to-br from-brand-off-white to-white rounded-2xl p-8 lg:p-12 border border-brand-blue/10 glow-elegant" data-aos="fade-up">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-playfair font-bold text-brand-black mb-4">
               Trusted & Certified
@@ -81,8 +81,8 @@ const About = () => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="flex items-center gap-4 bg-gradient-to-r from-white to-brand-blue/5 px-6 py-4 rounded-xl shadow-sm border border-brand-blue/20 hover:border-brand-blue/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/20 to-brand-blue/30 rounded-lg flex items-center justify-center">
+            <div className="flex items-center gap-4 bg-gradient-to-r from-white to-brand-blue/5 px-6 py-4 rounded-xl border border-brand-blue/20 hover:border-brand-blue/40 transition-all duration-300 glow-soft">
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue/20 to-brand-blue/30 rounded-lg flex items-center justify-center glow-blue">
                 🏭
               </div>
               <div>
@@ -91,8 +91,8 @@ const About = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-4 bg-gradient-to-r from-white to-brand-yellow/5 px-6 py-4 rounded-xl shadow-sm border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-lg flex items-center justify-center">
+            <div className="flex items-center gap-4 bg-gradient-to-r from-white to-brand-yellow/5 px-6 py-4 rounded-xl border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all duration-300 glow-yellow">
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/30 rounded-lg flex items-center justify-center glow-yellow">
                 🚀
               </div>
               <div>
