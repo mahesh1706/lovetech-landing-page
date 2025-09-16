@@ -37,9 +37,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/0bc6fa45-e0cd-4332-a9d1-5e406071306d.png" 
-                alt="Petluri EduTech" 
-                className="h-12 w-auto"
+                src="/petluri-logo-new.png" 
+                alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
+                className="h-16 w-auto glow-yellow"
               />
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">

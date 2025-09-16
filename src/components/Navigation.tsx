@@ -57,9 +57,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <img 
-              src="/lovable-uploads/0bc6fa45-e0cd-4332-a9d1-5e406071306d.png" 
-              alt="Petluri EduTech" 
-              className="h-8 sm:h-10 w-auto"
+              src="/petluri-logo-new.png" 
+              alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
+              className="h-12 sm:h-16 w-auto glow-yellow"
             />
           </div>
 
