@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import LogoProcessor from './LogoProcessor';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,10 +57,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <img 
-              src="/petluri-logo-new.png" 
+            <LogoProcessor
+              originalSrc="/petluri-logo-new.png" 
               alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
-              className="h-12 sm:h-16 w-auto glow-yellow"
+              className="h-16 sm:h-20 lg:h-24 w-auto glow-yellow drop-shadow-lg"
             />
           </div>
 

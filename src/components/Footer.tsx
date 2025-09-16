@@ -1,5 +1,6 @@
 
 import { Phone, Mail, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
+import LogoProcessor from './LogoProcessor';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -36,10 +37,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <img 
-                src="/petluri-logo-new.png" 
+              <LogoProcessor
+                originalSrc="/petluri-logo-new.png" 
                 alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
-                className="h-16 w-auto glow-yellow"
+                className="h-20 w-auto glow-yellow drop-shadow-lg"
               />
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">
