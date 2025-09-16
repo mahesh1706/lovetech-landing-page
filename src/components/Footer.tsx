@@ -37,11 +37,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <LogoProcessor
-                originalSrc="/petluri-logo-new.png" 
-                alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
-                className="h-20 w-auto glow-yellow drop-shadow-lg"
-              />
+              <h2 className="text-2xl font-bold text-brand-black">Petluri EduTech</h2>
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Industry-leading technical training for colleges and institutions. 

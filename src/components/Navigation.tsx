@@ -55,13 +55,9 @@ const Navigation = () => {
     }`}>
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Brand Name */}
           <div className="flex items-center flex-shrink-0">
-            <LogoProcessor
-              originalSrc="/petluri-logo-new.png" 
-              alt="Petluri EduTech - Learn Today, Lead Tomorrow" 
-              className="h-16 sm:h-20 lg:h-24 w-auto glow-yellow drop-shadow-lg"
-            />
+            <h1 className="text-xl font-bold text-brand-black">Petluri EduTech</h1>
           </div>
 
           {/* Desktop Navigation */}
