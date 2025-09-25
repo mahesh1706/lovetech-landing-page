@@ -18,6 +18,30 @@
   will-change: transform, opacity;
 }
 
+/* Swiper Custom Styles */
+.courses-swiper {
+  padding: 20px 0 50px;
+  overflow: visible;
+}
+
+.courses-swiper .swiper-pagination {
+  bottom: 10px;
+}
+
+.courses-swiper .swiper-pagination-bullet {
+  background: #1e66ff;
+  opacity: 0.3;
+}
+
+.courses-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.course-card {
+  will-change: transform, opacity;
+  transition: transform 0.35s ease;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

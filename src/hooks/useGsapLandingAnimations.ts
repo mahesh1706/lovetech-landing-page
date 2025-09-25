@@ -12,24 +12,56 @@ export default function useGsapLandingAnimations() {
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // HERO entrance animation
+    // HERO entrance animation (mobile-first)
     const heroTl = gsap.timeline({
       defaults: { ease: "power3.out" }
     });
     
-    heroTl.from(".hero-heading", { y: 40, opacity: 0, scale: 0.985, duration: 0.9 })
-          .from(".hero-sub", { y: 28, opacity: 0, scale: 0.985, duration: 0.75 }, "-=0.6")
-          .from(".hero-cta", { y: 18, opacity: 0, scale: 0.995, duration: 0.6 }, "-=0.5")
-          .from(".hero-stats", { y: 20, opacity: 0, duration: 0.6 }, "-=0.4");
+    heroTl.from(".msme-badge", { y: 18, opacity: 0, duration: 0.7 })
+          .from(".hero-heading", { y: 30, opacity: 0, scale: 0.985, duration: 0.9 }, "-=0.45")
+          .from(".hero-sub", { y: 20, opacity: 0, duration: 0.75 }, "-=0.6")
+          .from(".hero-cta", { y: 18, opacity: 0, stagger: 0.08, duration: 0.6 }, "-=0.5")
+          .from(".hero-stats", { y: 15, opacity: 0, duration: 0.6 }, "-=0.4");
 
-    // Course cards sidebar animation
-    gsap.from(".course-sidebar-card", {
-      x: -40,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.08,
-      ease: "power3.out",
-      delay: 0.3
+    // Course cards sidebar animation (desktop only)
+    gsap.matchMedia().add("(min-width: 1024px)", () => {
+      gsap.from(".course-sidebar-card", {
+        x: -40,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: "power3.out",
+        delay: 0.3
+      });
+    });
+
+    // Mobile swiper slide animations
+    gsap.matchMedia().add("(max-width: 1023px)", () => {
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!prefersReduced) {
+        // Observe swiper slides for active state changes
+        const observer = new MutationObserver(() => {
+          gsap.utils.toArray<HTMLElement>(".swiper-slide").forEach(slide => {
+            const isActive = slide.classList.contains("swiper-slide-active");
+            gsap.to(slide, { 
+              scale: isActive ? 1.03 : 0.98, 
+              duration: 0.35, 
+              ease: "power2.out" 
+            });
+          });
+        });
+        
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+        if (swiperWrapper) {
+          observer.observe(swiperWrapper, { 
+            attributes: true, 
+            subtree: true, 
+            attributeFilter: ["class"] 
+          });
+        }
+        
+        return () => observer.disconnect();
+      }
     });
 
     // Hero images animation
