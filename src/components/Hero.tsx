@@ -26,16 +26,16 @@ const Hero = () => {
           <div className="lg:col-span-3 relative">
             <div className="sticky top-32 space-y-4">
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Our Courses</h3>
-              {courses.map((course, index) => (
-                <div 
-                  key={course.name}
-                  className="group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:shadow-lg hover:border-blue-200/70 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-                  style={{ 
-                    animationDelay: course.delay,
-                    animationDuration: '0.6s',
-                    animationFillMode: 'both'
-                  }}
-                >
+               {courses.map((course, index) => (
+                 <div 
+                   key={course.name}
+                   className="course-sidebar-card group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:shadow-lg hover:border-blue-200/70 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                   style={{ 
+                     animationDelay: course.delay,
+                     animationDuration: '0.6s',
+                     animationFillMode: 'both'
+                   }}
+                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-lg group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
@@ -64,7 +64,7 @@ const Hero = () => {
                 MSME Registered & Startup India Certified
               </div>
               
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="hero-heading text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                 Industry-Leading
                 <span className="block text-blue-600 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                   Technical Training
@@ -74,16 +74,16 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="hero-sub text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 We supply industry-grade trainers to upskill colleges and institutions, 
                 creating tomorrow's tech leaders with cutting-edge expertise.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 min-h-[56px]"
+                className="cta-btn group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 min-h-[56px]"
               >
                 Start Your Journey
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -96,17 +96,17 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 mt-12 border-t border-gray-100">
+            <div className="hero-stats grid grid-cols-3 gap-8 pt-8 mt-12 border-t border-gray-100">
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-600 mb-1">500+</div>
+                <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="500">0</div>
                 <div className="text-sm text-gray-600">Students Trained</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-600 mb-1">50+</div>
+                <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="50">0</div>
                 <div className="text-sm text-gray-600">Partner Colleges</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-600 mb-1">9+</div>
+                <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="9">0</div>
                 <div className="text-sm text-gray-600">Premium Courses</div>
               </div>
             </div>
@@ -117,7 +117,7 @@ const Hero = () => {
             <div className="space-y-6">
               
               {/* Main featured image */}
-              <div className="relative group">
+              <div className="hero-image relative group parallax-slow">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-blue-600/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-white rounded-3xl p-2 shadow-lg hover:shadow-xl transition-all duration-300">
                   <img 
@@ -133,7 +133,7 @@ const Hero = () => {
 
               {/* Secondary images */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative group">
+                <div className="hero-image relative group parallax-slow">
                   <div className="bg-white rounded-2xl p-2 shadow-md hover:shadow-lg transition-all duration-300">
                     <img 
                       src={coworkingStudy} 
@@ -143,7 +143,7 @@ const Hero = () => {
                   </div>
                 </div>
                 
-                <div className="relative group">
+                <div className="hero-image relative group parallax-slow">
                   <div className="bg-white rounded-2xl p-2 shadow-md hover:shadow-lg transition-all duration-300">
                     <img 
                       src={groupStudy} 

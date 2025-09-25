@@ -10,8 +10,11 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import WhatsAppModal from '@/components/WhatsAppModal';
+import useGsapLandingAnimations from '@/hooks/useGsapLandingAnimations';
 
 const Index = () => {
+  const rootRef = useGsapLandingAnimations();
+
   useEffect(() => {
     // Initialize AOS
     if (typeof window !== 'undefined') {
@@ -28,7 +31,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-lato">
+    <div ref={rootRef} className="min-h-screen bg-white font-lato">
       <Navigation />
       <Hero />
       <About />

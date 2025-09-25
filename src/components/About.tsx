@@ -44,7 +44,7 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`text-center p-6 rounded-xl transition-all duration-300 transform hover:-translate-y-2 border ${
+              className={`feature-card text-center p-6 rounded-xl transition-all duration-300 transform hover:-translate-y-2 border ${
                 index % 2 === 0 
                   ? 'bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 border-brand-blue/20 hover:border-brand-blue/40 glow-soft' 
                   : 'bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 border-brand-yellow/20 hover:border-brand-yellow/40 glow-yellow'

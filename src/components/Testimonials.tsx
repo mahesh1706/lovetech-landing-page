@@ -63,7 +63,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="relative max-w-4xl mx-auto" data-aos="fade-up">
+        <div className="testimonial relative max-w-4xl mx-auto" data-aos="fade-up">
           <div className="bg-gradient-to-br from-white to-brand-off-white/50 rounded-2xl p-8 lg:p-12 min-h-[300px] flex items-center border border-brand-blue/10 glow-elegant">
             <div className="w-full">
               {testimonials[currentTestimonial].type === 'video' ? (

@@ -71,10 +71,10 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="pt-8">
+            <div className="cta-section pt-8">
               <button
                 onClick={() => window.open('https://wa.me/917788990099', '_blank')}
-                className="w-full bg-gradient-to-r from-brand-blue to-brand-blue-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 transform glow-blue"
+                className="cta-btn w-full bg-gradient-to-r from-brand-blue to-brand-blue-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 transform glow-blue"
               >
                 Start WhatsApp Conversation
               </button>

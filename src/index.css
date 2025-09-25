@@ -3,6 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Navigation compact state */
+.site-nav {
+  transition: padding 0.28s ease, box-shadow 0.28s ease;
+}
+
+.site-nav.nav--compact {
+  padding: 10px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* GSAP Animation Helper Classes */
+.will-change-transform {
+  will-change: transform, opacity;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
