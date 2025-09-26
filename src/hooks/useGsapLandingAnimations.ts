@@ -12,55 +12,82 @@ export default function useGsapLandingAnimations() {
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // HERO entrance animation (mobile-first)
+    // HERO entrance with improved targeting
     const heroTl = gsap.timeline({
       defaults: { ease: "power3.out" }
     });
     
-    heroTl.from(".msme-badge", { y: 18, opacity: 0, duration: 0.7 })
-          .from(".hero-heading", { y: 30, opacity: 0, scale: 0.985, duration: 0.9 }, "-=0.45")
-          .from(".hero-sub", { y: 20, opacity: 0, duration: 0.75 }, "-=0.6")
-          .from(".hero-cta", { y: 18, opacity: 0, stagger: 0.08, duration: 0.6 }, "-=0.5")
-          .from(".hero-stats", { y: 15, opacity: 0, duration: 0.6 }, "-=0.4");
+    // Target elements within hero component specifically
+    const heroElements = {
+      badge: rootRef.current.querySelector(".msme-badge"),
+      heading: rootRef.current.querySelector(".hero-heading"),
+      sub: rootRef.current.querySelector(".hero-sub"),
+      cta: rootRef.current.querySelector(".hero-cta"),
+      stats: rootRef.current.querySelector(".hero-stats")
+    };
 
-    // Course cards sidebar animation (desktop only)
-    gsap.matchMedia().add("(min-width: 1024px)", () => {
-      gsap.from(".course-sidebar-card", {
-        x: -40,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power3.out",
-        delay: 0.3
-      });
-    });
+    if (heroElements.badge) {
+      heroTl.from(heroElements.badge, { y: 30, opacity: 0, duration: 0.8 });
+    }
+    if (heroElements.heading) {
+      heroTl.from(heroElements.heading, { y: 40, opacity: 0, duration: 0.9 }, "-=0.6");
+    }
+    if (heroElements.sub) {
+      heroTl.from(heroElements.sub, { y: 30, opacity: 0, duration: 0.7 }, "-=0.5");
+    }
+    if (heroElements.cta) {
+      heroTl.from(heroElements.cta, { y: 20, opacity: 0, scale: 0.98, duration: 0.6 }, "-=0.4");
+    }
+    if (heroElements.stats) {
+      heroTl.from(heroElements.stats, { y: 20, opacity: 0, duration: 0.6 }, "-=0.3");
+    }
 
-    // Mobile swiper slide animations
-    gsap.matchMedia().add("(max-width: 1023px)", () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!prefersReduced) {
-        // Observe swiper slides for active state changes
-        const observer = new MutationObserver(() => {
-          gsap.utils.toArray<HTMLElement>(".swiper-slide").forEach(slide => {
-            const isActive = slide.classList.contains("swiper-slide-active");
-            gsap.to(slide, { 
-              scale: isActive ? 1.03 : 0.98, 
-              duration: 0.35, 
-              ease: "power2.out" 
-            });
+    // Desktop vertical course carousel animations
+    ScrollTrigger.matchMedia({
+      "(min-width: 1024px)": function() {
+        // Animate vertical course cards
+        gsap.utils.toArray<HTMLElement>(".course-vertical-card").forEach((el, i) => {
+          gsap.from(el, {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power3.out",
+            delay: i * 0.1,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            }
           });
         });
-        
-        const swiperWrapper = document.querySelector(".swiper-wrapper");
-        if (swiperWrapper) {
-          observer.observe(swiperWrapper, { 
-            attributes: true, 
-            subtree: true, 
-            attributeFilter: ["class"] 
+      },
+      
+      "(max-width: 1023px)": function() {
+        // Mobile course cards in swiper with active slide scaling
+        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!prefersReduced) {
+          const observer = new MutationObserver(() => {
+            gsap.utils.toArray<HTMLElement>(".swiper-slide").forEach(slide => {
+              const isActive = slide.classList.contains("swiper-slide-active");
+              gsap.to(slide, { 
+                scale: isActive ? 1.03 : 0.98, 
+                duration: 0.35, 
+                ease: "power2.out" 
+              });
+            });
           });
+          
+          const swiperWrapper = rootRef.current?.querySelector(".swiper-wrapper");
+          if (swiperWrapper) {
+            observer.observe(swiperWrapper, { 
+              attributes: true, 
+              subtree: true, 
+              attributeFilter: ["class"] 
+            });
+          }
+          
+          return () => observer.disconnect();
         }
-        
-        return () => observer.disconnect();
       }
     });
 

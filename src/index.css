@@ -319,6 +319,38 @@ All colors MUST be HSL.
   text-shadow: 0 0 10px hsl(var(--brand-yellow) / 0.4);
 }
 
+/* Custom Swiper Styles */
+.courses-swiper {
+  @apply pb-8;
+}
+
+.courses-swiper .swiper-pagination {
+  @apply !bottom-0;
+}
+
+.courses-swiper .swiper-pagination-bullet {
+  @apply !bg-blue-300 !opacity-50;
+}
+
+.courses-swiper .swiper-pagination-bullet-active {
+  @apply !bg-blue-600 !opacity-100;
+}
+
+/* Vertical course carousel animations */
+.course-vertical-card {
+  @apply transition-all duration-700 ease-in-out;
+}
+
+/* Float animation for badges */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
   .animate-float {
