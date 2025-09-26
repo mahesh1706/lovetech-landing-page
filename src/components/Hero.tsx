@@ -25,15 +25,15 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-white pt-20 relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-white pt-20 relative">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-blue-50/20"></div>
-      <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100/20 to-blue-200/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-blue-50/30 to-indigo-50/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-blue-50/20 pointer-events-none"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100/20 to-blue-200/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-blue-50/30 to-indigo-50/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Mobile-first layout: Hero content first, then courses */}
-        <div className="flex flex-col lg:flex-row lg:gap-12 items-center min-h-[80vh]">
+        <div className="flex flex-col lg:flex-row lg:gap-12 items-center lg:items-start min-h-[80vh]">
           
           {/* Hero Content - appears first on mobile */}
           <main className="lg:flex-1 lg:order-2 text-center lg:text-left space-y-6 lg:space-y-8 mb-12 lg:mb-0">
@@ -102,7 +102,7 @@ const Hero = () => {
           </main>
 
           {/* Courses Section - appears below hero on mobile, left side on desktop */}
-          <aside className="lg:flex-none lg:w-80 lg:order-1 w-full">
+          <aside className="w-full lg:min-w-[280px] lg:w-[300px] xl:w-80 lg:flex-shrink-0 lg:order-1">
             <div className="lg:sticky lg:top-32">
               <h3 className="text-lg font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center lg:text-left">Our Courses</h3>
               
