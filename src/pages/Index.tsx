@@ -33,12 +33,14 @@ const Index = () => {
   return (
     <div ref={rootRef} className="min-h-screen bg-white font-lato">
       <Navigation />
-      <Hero />
-      <About />
-      <Courses />
-      <Testimonials />
-      <Team />
-      <Contact />
+      <main className="pt-20 md:pt-24">
+        <Hero />
+        <About />
+        <Courses />
+        <Testimonials />
+        <Team />
+        <Contact />
+      </main>
       <Footer />
       <WhatsAppButton />
       <WhatsAppModal />

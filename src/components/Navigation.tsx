@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import LogoProcessor from './LogoProcessor';
+import Logo from "../assets/logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,14 +50,14 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`site-nav fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300 py-2 md:py-3`}>
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Brand Name */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Brand Logo */}
           <div className="flex items-center flex-shrink-0">
-            <h1 className="text-xl font-bold text-brand-black">Petluri EduTech</h1>
+            <a href="/" className="inline-flex items-center" aria-label="Go to homepage">
+              <img src={Logo} alt="Petluri EduTech Logo" className="h-14 md:h-20 w-auto object-contain" />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -126,7 +126,7 @@ const Navigation = () => {
           </>
         )}
       </div>
-    </nav>
+    </header>
   );
 };
 

@@ -42,54 +42,22 @@ export default function useGsapLandingAnimations() {
       heroTl.from(heroElements.stats, { y: 20, opacity: 0, duration: 0.6 }, "-=0.3");
     }
 
-    // Desktop vertical course carousel animations
-    ScrollTrigger.matchMedia({
-      "(min-width: 1024px)": function() {
-        // Animate vertical course cards
-        gsap.utils.toArray<HTMLElement>(".course-vertical-card").forEach((el, i) => {
-          gsap.from(el, {
-            y: 20,
-            opacity: 0,
-            duration: 0.6,
-            ease: "power3.out",
-            delay: i * 0.1,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-              toggleActions: "play none none none",
+    // Guard: disable all course-related animations for desktop/tablet; keep mobile swiper as-is elsewhere
+    const coursesEl = document.getElementById('courses');
+    if (coursesEl) {
+      // Kill any existing ScrollTriggers/tweens that target courses area
+      try {
+        ScrollTrigger.getAll().forEach(t => {
+          try {
+            const trig = (t as any).trigger as Element | null;
+            if (trig && coursesEl.contains(trig)) {
+              t.kill(true);
             }
-          });
+          } catch (_) {}
         });
-      },
-      
-      "(max-width: 1023px)": function() {
-        // Mobile course cards in swiper with active slide scaling
-        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!prefersReduced) {
-          const observer = new MutationObserver(() => {
-            gsap.utils.toArray<HTMLElement>(".swiper-slide").forEach(slide => {
-              const isActive = slide.classList.contains("swiper-slide-active");
-              gsap.to(slide, { 
-                scale: isActive ? 1.03 : 0.98, 
-                duration: 0.35, 
-                ease: "power2.out" 
-              });
-            });
-          });
-          
-          const swiperWrapper = rootRef.current?.querySelector(".swiper-wrapper");
-          if (swiperWrapper) {
-            observer.observe(swiperWrapper, { 
-              attributes: true, 
-              subtree: true, 
-              attributeFilter: ["class"] 
-            });
-          }
-          
-          return () => observer.disconnect();
-        }
-      }
-    });
+        gsap.killTweensOf(document.querySelectorAll('#courses, #courses *'));
+      } catch (_) {}
+    }
 
     // Hero images animation
     gsap.from(".hero-image", {
@@ -128,17 +96,7 @@ export default function useGsapLandingAnimations() {
       once: true
     });
 
-    // Course tiles animation
-    ScrollTrigger.batch(".course-tile", {
-      start: "top 90%",
-      onEnter: batch => {
-        gsap.fromTo(batch,
-          { y: 28, opacity: 0, scale: 0.995 },
-          { y: 0, opacity: 1, scale: 1, stagger: 0.06, duration: 0.7, ease: "power3.out", overwrite: true }
-        );
-      },
-      once: true
-    });
+    // Remove course tiles animation to keep courses static
 
     // Testimonials alternating slide-in
     gsap.utils.toArray<HTMLElement>(".testimonial").forEach((el, i) => {

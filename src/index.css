@@ -6,6 +6,7 @@
 /* Navigation compact state */
 .site-nav {
   transition: padding 0.28s ease, box-shadow 0.28s ease;
+  z-index: 9999;
 }
 
 .site-nav.nav--compact {
@@ -16,6 +17,14 @@
 /* GSAP Animation Helper Classes */
 .will-change-transform {
   will-change: transform, opacity;
+}
+
+/* Prevent any CSS transitions/animations in courses area as fallback */
+.disable-course-animations #courses,
+.disable-course-animations #courses * {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
 }
 
 /* Swiper Custom Styles */
@@ -228,6 +237,12 @@ All colors MUST be HSL.
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
+
+/* Ensure hero content has extra top padding so images don't collide with header */
+#hero { padding-top: calc(var(--site-nav-height, 76px) + 8px); }
+
+/* Optional helper if plain CSS classes are used for hero backgrounds */
+.hero-background { z-index: -10; pointer-events: none; }
 
 @keyframes float {
   0%, 100% {

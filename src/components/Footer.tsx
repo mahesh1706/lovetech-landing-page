@@ -1,6 +1,6 @@
 
 import { Phone, Mail, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
-import LogoProcessor from './LogoProcessor';
+import Logo from "../assets/logo.svg";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -37,7 +37,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <h2 className="text-2xl font-bold text-brand-black">Petluri EduTech</h2>
+              <a href="/" className="inline-flex items-center">
+                <img src={Logo} alt="Petluri EduTech Logo" className="h-16 md:h-24 w-auto object-contain mx-auto md:mx-0" />
+              </a>
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Industry-leading technical training for colleges and institutions. 
