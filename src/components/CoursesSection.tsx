@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -14,15 +15,44 @@ interface CoursesSectionProps {
 }
 
 const CoursesSection = ({ courses }: CoursesSectionProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const verticalCarouselRef = useRef<HTMLDivElement>(null);
 
-  // Desktop vertical auto-loop
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % courses.length);
-    }, 3000); // Change every 3 seconds
+  useLayoutEffect(() => {
+    const carousel = verticalCarouselRef.current;
+    if (!carousel) return;
 
-    return () => clearInterval(interval);
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    // Create continuous vertical carousel with GSAP
+    const cards = gsap.utils.toArray<HTMLElement>('.course-vertical-card');
+    if (cards.length === 0) return;
+
+    // Duplicate courses to create seamless loop
+    const cardHeight = 120; // Card height + spacing
+    const totalHeight = cards.length * cardHeight;
+
+    // Set initial positions
+    cards.forEach((card, i) => {
+      gsap.set(card, { y: i * cardHeight });
+    });
+
+    // Create infinite loop timeline
+    const tl = gsap.timeline({ repeat: -1 });
+    
+    // Move all cards up by their total height
+    tl.to(cards, {
+      y: `-=${totalHeight}`,
+      duration: courses.length * 3, // 3 seconds per card
+      ease: "none",
+      modifiers: {
+        y: gsap.utils.unitize(gsap.utils.wrap(-cardHeight, totalHeight - cardHeight))
+      }
+    });
+
+    return () => {
+      tl.kill();
+    };
   }, [courses.length]);
 
   return (
@@ -32,47 +62,26 @@ const CoursesSection = ({ courses }: CoursesSectionProps) => {
         
         {/* Desktop Vertical Carousel - visible on lg+ screens */}
         <div className="hidden lg:block">
-          <div className="relative h-[400px] overflow-hidden">
-            <div className="space-y-4">
-              {courses.map((course, index) => {
-                const position = (index - currentIndex + courses.length) % courses.length;
-                const isVisible = position < 3; // Show 3 cards at a time
-                
-                return (
-                  <div
-                    key={course.title}
-                    className={`course-vertical-card absolute transition-all duration-700 ease-in-out ${
-                      isVisible ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{
-                      transform: `translateY(${position * 120}px)`,
-                      zIndex: isVisible ? 10 - position : 0,
-                    }}
-                  >
-                    <div className="course-sidebar-card group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:shadow-lg hover:border-blue-200/70 transition-all duration-300 hover:-translate-y-1">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-lg group-hover:scale-110 transition-transform duration-300">
-                          {course.icon}
-                        </div>
-                        <div className="font-medium text-gray-800 text-sm">{course.title}</div>
-                      </div>
+          <div 
+            ref={verticalCarouselRef}
+            className="relative h-[360px] overflow-hidden"
+          >
+            {/* Duplicate courses array for seamless loop */}
+            {[...courses, ...courses].map((course, index) => (
+              <div
+                key={`${course.title}-${index}`}
+                className="course-vertical-card absolute w-full"
+              >
+                <div className="course-sidebar-card group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:shadow-lg hover:border-blue-200/70 transition-all duration-300 hover:-translate-y-1 mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-lg group-hover:scale-110 transition-transform duration-300">
+                      {course.icon}
                     </div>
+                    <div className="font-medium text-gray-800 text-sm">{course.title}</div>
                   </div>
-                );
-              })}
-            </div>
-            
-            {/* Progress indicator */}
-            <div className="absolute bottom-0 left-4 flex space-x-1">
-              {courses.map((_, index) => (
-                <div
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-blue-600' : 'bg-blue-200'
-                  }`}
-                />
-              ))}
-            </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
