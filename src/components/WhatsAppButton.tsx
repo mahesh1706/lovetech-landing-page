@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
     const message = encodeURIComponent(
       "Hi! I'm interested in learning more about Petluri EduTech's training programs for our institution. Could you please provide more details?"
     );
-    window.open(`https://wa.me/917788990099?text=${message}`, '_blank');
+    window.open(`https://wa.me/919008291433?text=${message}`, '_blank');
   };
 
   return (

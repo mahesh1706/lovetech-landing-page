@@ -42,7 +42,7 @@ Please provide more details and pricing information.
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/917788990099?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/919008291433?text=${encodedMessage}`, '_blank');
     setIsOpen(false);
   };
 

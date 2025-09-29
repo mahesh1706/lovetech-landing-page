@@ -123,7 +123,7 @@ const Footer = () => {
 
             <div className="mt-6">
               <button
-                onClick={() => window.open('https://wa.me/917788990099', '_blank')}
+                onClick={() => window.open('https://wa.me/919008291433', '_blank')}
                 className="w-full bg-gradient-to-r from-brand-yellow to-brand-yellow-light text-brand-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300 glow-yellow"
               >
                 WhatsApp Enquiry

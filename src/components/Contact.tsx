@@ -1,7 +1,46 @@
 
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    institution: '',
+    course: '',
+    students: '',
+    message: ''
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const plainMessage = [
+      'Hello Petluri Edu-Tech,',
+      '',
+      `I am ${formData.name} from ${formData.institution}.`,
+      `I'm interested in your ${formData.course || 'programs'}.`,
+      '',
+      'Contact details:',
+      `• Email: ${formData.email}`,
+      `• Students: ${formData.students || 'N/A'}`,
+      '',
+      'Message:',
+      `${formData.message || 'N/A'}`
+    ].join('\n');
+
+    const encoded = encodeURIComponent(plainMessage);
+    const url = `https://wa.me/919008291433?text=${encoded}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 gradient-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +112,24 @@ const Contact = () => {
 
             <div className="cta-section pt-8">
               <button
-                onClick={() => window.open('https://wa.me/917788990099', '_blank')}
+                onClick={() => {
+                  const ctaMessage = [
+                    'Hello Petluri Edu-Tech,',
+                    '',
+                    formData.name || formData.institution || formData.course
+                      ? `I am ${formData.name || 'N/A'} from ${formData.institution || 'N/A'}.\nI'm interested in ${formData.course || 'your programs'}.`
+                      : 'I would like to know more about your programs.',
+                    '',
+                    'Contact details:',
+                    `• Email: ${formData.email || 'N/A'}`,
+                    `• Students: ${formData.students || 'N/A'}`,
+                    '',
+                    'Message:',
+                    `${formData.message || 'N/A'}`
+                  ].join('\n');
+                  const encoded = encodeURIComponent(ctaMessage);
+                  window.open(`https://wa.me/919008291433?text=${encoded}`, '_blank');
+                }}
                 className="cta-btn w-full bg-gradient-to-r from-brand-blue to-brand-blue-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 transform glow-blue"
               >
                 Start WhatsApp Conversation
@@ -87,7 +143,7 @@ const Contact = () => {
               Send us a Message
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-brand-black mb-2">
@@ -95,6 +151,10 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors"
                     placeholder="Enter your name"
                   />
@@ -106,6 +166,10 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors"
                     placeholder="Enter your email"
                   />
@@ -118,6 +182,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="institution"
+                  value={formData.institution}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors"
                   placeholder="Enter your institution name"
                 />
@@ -127,8 +195,8 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-brand-black mb-2">
                   Course Interest
                 </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors">
-                  <option>Select a course</option>
+                <select name="course" value={formData.course} onChange={handleChange} required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors">
+                  <option value="">Select a course</option>
                   <option>Excel Analytics</option>
                   <option>Digital Marketing</option>
                   <option>Power BI</option>
@@ -148,6 +216,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="number"
+                  name="students"
+                  value={formData.students}
+                  onChange={handleChange}
+                  min={1}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors"
                   placeholder="Approximate number of students"
                 />
@@ -159,6 +231,9 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-colors resize-none"
                   placeholder="Tell us about your training requirements..."
                 ></textarea>

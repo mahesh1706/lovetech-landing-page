@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Courses from '@/components/Courses';
 import About from '@/components/About';
+import Partners from '@/components/Partners';
 import Testimonials from '@/components/Testimonials';
 import Team from '@/components/Team';
 import Contact from '@/components/Contact';
@@ -35,6 +36,7 @@ const Index = () => {
       <Navigation />
       <main className="pt-20 md:pt-24">
         <Hero />
+        <Partners />
         <About />
         <Courses />
         <Testimonials />

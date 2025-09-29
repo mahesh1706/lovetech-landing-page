@@ -72,7 +72,7 @@ const Navigation = () => {
               </button>
             ))}
             <button
-              onClick={() => window.open('https://wa.me/917788990099', '_blank')}
+              onClick={() => window.open('https://wa.me/919008291433', '_blank')}
               className="bg-brand-yellow text-brand-black px-4 xl:px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105 text-sm xl:text-base whitespace-nowrap"
             >
               Enquire on WhatsApp
@@ -114,7 +114,7 @@ const Navigation = () => {
                 ))}
                 <button
                   onClick={() => {
-                    window.open('https://wa.me/917788990099', '_blank');
+                    window.open('https://wa.me/919008291433', '_blank');
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-brand-yellow text-brand-black px-6 py-4 rounded-xl font-semibold mt-4 hover:bg-opacity-90 transition-all duration-200 min-h-[44px]"

@@ -66,7 +66,7 @@ Thank you!
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/917788990099?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/919008291433?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
