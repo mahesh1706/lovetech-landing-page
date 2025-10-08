@@ -556,7 +556,7 @@ export const coursesData: Course[] = [
     description: "Full-stack development with modern frameworks including React, Node.js, and mobile app development.",
     icon: "💻",
     color: "from-cyan-400 to-cyan-600",
-    duration: "100 Hours", 
+    duration: "30 Hours", 
     level: "Beginner to Advanced",
     objectives: [
       "Master HTML, CSS, and JavaScript Fundamentals",
