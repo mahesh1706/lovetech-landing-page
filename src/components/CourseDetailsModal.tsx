@@ -111,13 +111,13 @@ Thank you!
   }
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[100] p-4 pt-24">
       <div 
-        className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-500 scale-100 animate-fade-in"
+        className="bg-white rounded-3xl max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all duration-500 scale-100 animate-fade-in relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-white rounded-t-3xl border-b border-gray-100 px-8 py-6 flex items-center justify-between">
+        <div className="sticky top-0 bg-white rounded-t-3xl border-b border-gray-100 px-8 py-6 flex items-center justify-between z-10 shadow-sm">
           <div className="flex items-center gap-4">
             <div className={`w-16 h-16 bg-gradient-to-r ${course.color} rounded-xl flex items-center justify-center text-2xl`}>
               {course.icon}
@@ -138,7 +138,8 @@ Thank you!
           </div>
           <button
             onClick={handleClose}
-            className="p-3 hover:bg-gray-100 rounded-xl transition-colors duration-200 group"
+            className="p-3 hover:bg-gray-100 rounded-xl transition-colors duration-200 group flex-shrink-0 z-20"
+            aria-label="Close modal"
           >
             <X size={24} className="text-gray-500 group-hover:text-gray-700" />
           </button>
