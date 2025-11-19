@@ -1,7 +1,7 @@
 
 import { Linkedin, Mail } from 'lucide-react';
 import kiranImg from "../assets/kiran .jpg";
-import prameelaImg from "../assets/prameela .jpg";
+import prameelaImg from "../assets/prameela-new.jpg";
 
 const Team = () => {
   const teamMembers = [
