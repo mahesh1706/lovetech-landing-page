@@ -1,7 +1,7 @@
 
 import { Linkedin, Mail } from 'lucide-react';
-import kiranImg from "../assets/kiran .jpg";
-import prameelaImg from "../assets/prameela .jpg";
+import kiranImg from "../assets/kiran.jpg";
+import prameelaImg from "../assets/prameela.jpg";
 
 const Team = () => {
   const teamMembers = [
@@ -50,7 +50,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover object-top"
+                  className="w-full h-80 object-cover object-top"
                 />
               </div>
               
