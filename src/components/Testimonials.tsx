@@ -146,11 +146,11 @@ const Testimonials = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20 glow-soft hover:glow-blue transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-            <div className="text-4xl font-bold text-brand-blue mb-2 text-glow-blue">95%</div>
-            <div className="text-gray-600">Placement Success Rate</div>
+            <div className="text-4xl font-bold text-brand-blue mb-2 text-glow-blue">50+</div>
+            <div className="text-gray-600">Partner Institutions</div>
           </div>
           <div className="text-center bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 p-6 rounded-xl border border-brand-yellow/20 glow-yellow hover:glow-yellow transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-            <div className="text-4xl font-bold text-brand-yellow-dark mb-2 text-glow-yellow">4.9/5</div>
+            <div className="text-4xl font-bold text-brand-yellow-dark mb-2 text-glow-yellow">4+</div>
             <div className="text-gray-600">Average Rating</div>
           </div>
           <div className="text-center bg-gradient-to-br from-brand-blue/5 to-brand-blue/10 p-6 rounded-xl border border-brand-blue/20 glow-soft hover:glow-blue transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
