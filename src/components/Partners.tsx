@@ -2,11 +2,8 @@ import stfrancis from '@/assets/partners/stfrancis.jpeg';
 import vivekananda from '@/assets/partners/vivekananda.jpeg';
 import mewa from '@/assets/partners/mewa.png';
 import akshara from '@/assets/partners/akshara.png';
-<<<<<<< HEAD
 import alameen from '@/assets/partners/al-ameen.jpg';
-=======
 import rvnssmrv from '@/assets/partners/rvnssmrv.jpg';
->>>>>>> 5cfdb496de74da5fe7a5daed95619922249f5a14
 
 const Partners = () => {
   const logos = [
@@ -14,11 +11,8 @@ const Partners = () => {
     { src: vivekananda, alt: 'Swamy Vivekananda Rural First Grade College' },
     { src: mewa, alt: 'MEWA - Vanguard Business School' },
     { src: akshara, alt: 'Akshara College' },
-<<<<<<< HEAD
     { src: alameen, alt: 'Al-Ameen College' },
-=======
     { src: rvnssmrv, alt: 'R V N SSMRV College' },
->>>>>>> 5cfdb496de74da5fe7a5daed95619922249f5a14
   ];
 
   return (
