@@ -2,6 +2,7 @@ import stfrancis from '@/assets/partners/stfrancis.jpeg';
 import vivekananda from '@/assets/partners/vivekananda.jpeg';
 import mewa from '@/assets/partners/mewa.png';
 import akshara from '@/assets/partners/akshara.png';
+import alameen from '@/assets/partners/al-ameen.jpg';
 
 const Partners = () => {
   const logos = [
@@ -9,6 +10,7 @@ const Partners = () => {
     { src: vivekananda, alt: 'Swamy Vivekananda Rural First Grade College' },
     { src: mewa, alt: 'MEWA - Vanguard Business School' },
     { src: akshara, alt: 'Akshara College' },
+    { src: alameen, alt: 'Al-Ameen College' },
   ];
 
   return (

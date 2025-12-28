@@ -65,7 +65,9 @@ const HeroContent = () => {
           <div className="text-sm text-gray-600">Students Trained</div>
         </div>
         <div className="text-center lg:text-left">
-          <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="50">0</div>
+          <div className="text-2xl lg:text-3xl font-bold text-blue-600 mb-1">
+            <span className="counter" data-target="9">0</span>+
+          </div>
           <div className="text-sm text-gray-600">Partner Colleges</div>
         </div>
         <div className="text-center lg:text-left">
