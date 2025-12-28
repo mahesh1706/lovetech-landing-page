@@ -61,7 +61,7 @@ const HeroContent = () => {
       {/* Stats */}
       <div className="hero-stats grid grid-cols-3 gap-8 pt-8 mt-12 border-t border-gray-100">
         <div className="text-center lg:text-left">
-          <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="500">0</div>
+          <div className="counter text-2xl lg:text-3xl font-bold text-blue-600 mb-1" data-target="1800">0</div>
           <div className="text-sm text-gray-600">Students Trained</div>
         </div>
         <div className="text-center lg:text-left">

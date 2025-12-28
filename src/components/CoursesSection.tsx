@@ -72,7 +72,7 @@ const CoursesSection = ({ courses }: CoursesSectionProps) => {
                 key={`${course.title}-${index}`}
                 className="course-vertical-card absolute w-full"
               >
-                <div className="course-sidebar-card group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:shadow-lg hover:border-blue-200/70 transition-all duration-300 hover:-translate-y-1 mb-4">
+                <div className="course-sidebar-card group bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-blue-100/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 mb-4 hover:shadow-[0_0_30px_hsl(var(--brand-blue)/0.4)]">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-lg group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
@@ -99,7 +99,7 @@ const CoursesSection = ({ courses }: CoursesSectionProps) => {
           >
             {courses.map((course, index) => (
               <SwiperSlide key={course.title} className="!w-72">
-                <div className="course-card bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-blue-100/50 mx-2">
+                <div className="course-card bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-blue-100/50 mx-2 hover:shadow-[0_0_35px_hsl(var(--brand-blue)/0.5)] hover:border-blue-300 transition-all duration-300">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-lg">
                       {course.icon}

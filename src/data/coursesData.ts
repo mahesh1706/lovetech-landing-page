@@ -607,5 +607,194 @@ export const coursesData: Course[] = [
       "E-commerce Web Application - Build a full-stack e-commerce platform with payment integration",
       "Social Media Mobile App - Create a mobile application with real-time features and user authentication"
     ]
+  },
+  {
+    id: "java-full-stack",
+    title: "Java Full Stack Development",
+    description: "Complete Java full-stack development covering Core Java, Spring Boot, Hibernate, and modern frontend technologies.",
+    icon: "☕",
+    color: "from-orange-400 to-red-600",
+    duration: "30 Hours",
+    level: "Beginner to Advanced",
+    objectives: [
+      "Master Core Java Programming and OOP Concepts",
+      "Build RESTful APIs with Spring Boot",
+      "Implement Database Operations with Hibernate and JPA",
+      "Develop Modern Frontend with HTML, CSS, and JavaScript",
+      "Deploy Microservices Architecture",
+      "Create Enterprise-Grade Full Stack Applications"
+    ],
+    modules: [
+      {
+        title: "Java Fundamentals",
+        duration: "4 hours",
+        topics: ["Java Basics and Syntax", "OOP Concepts: Classes, Objects, Inheritance", "Exception Handling", "Collections Framework", "Multithreading Basics"]
+      },
+      {
+        title: "Database Management with MySQL",
+        duration: "3 hours",
+        topics: ["SQL Fundamentals", "Database Design and Normalization", "CRUD Operations", "Joins and Subqueries", "JDBC Programming"]
+      },
+      {
+        title: "Spring Framework Essentials",
+        duration: "4 hours",
+        topics: ["Spring Core and Dependency Injection", "Spring MVC Architecture", "RESTful Web Services", "Spring Data JPA", "Exception Handling in Spring"]
+      },
+      {
+        title: "Spring Boot Development",
+        duration: "5 hours",
+        topics: ["Spring Boot Basics and Auto-configuration", "Building REST APIs", "Spring Security and OAuth2", "Microservices with Spring Boot", "Spring Boot Testing"]
+      },
+      {
+        title: "Hibernate and ORM",
+        duration: "3 hours",
+        topics: ["ORM Concepts", "Hibernate Configuration", "Entity Mapping and Relationships", "HQL and Criteria API", "Caching Strategies"]
+      },
+      {
+        title: "Frontend Development",
+        duration: "5 hours",
+        topics: ["HTML5 and CSS3 Fundamentals", "Responsive Design with Bootstrap", "JavaScript ES6+", "DOM Manipulation", "AJAX and API Integration"]
+      },
+      {
+        title: "DevOps and Deployment",
+        duration: "3 hours",
+        topics: ["Git Version Control", "Maven Build Tool", "Docker Basics", "CI/CD with Jenkins", "Cloud Deployment"]
+      },
+      {
+        title: "Advanced Topics",
+        duration: "3 hours",
+        topics: ["Design Patterns", "Microservices Architecture", "Message Queuing", "Performance Optimization", "Security Best Practices"]
+      }
+    ],
+    capstoneProjects: [
+      "Employee Management System - Build a full-stack enterprise application with authentication and role-based access",
+      "E-Learning Platform - Develop a microservices-based online learning system with payment gateway integration"
+    ]
+  },
+  {
+    id: "mern-full-stack",
+    title: "MERN Stack Development",
+    description: "Full-stack web development using MongoDB, Express.js, React.js, and Node.js for modern web applications.",
+    icon: "⚛️",
+    color: "from-cyan-400 to-blue-600",
+    duration: "30 Hours",
+    level: "Beginner to Advanced",
+    objectives: [
+      "Master MongoDB Database Design and Operations",
+      "Build Backend APIs with Express.js and Node.js",
+      "Develop Interactive UIs with React.js",
+      "Implement Authentication and Authorization",
+      "Deploy Full Stack Applications to Cloud",
+      "Create Real-time Applications with WebSockets"
+    ],
+    modules: [
+      {
+        title: "JavaScript Fundamentals",
+        duration: "3 hours",
+        topics: ["ES6+ Features", "Async Programming with Promises and Async/Await", "Array Methods and Functional Programming", "Modules and Imports", "Error Handling"]
+      },
+      {
+        title: "Node.js and Express.js",
+        duration: "5 hours",
+        topics: ["Node.js Basics and NPM", "Building REST APIs with Express", "Middleware and Routing", "File System Operations", "Environment Variables and Configuration"]
+      },
+      {
+        title: "MongoDB and Mongoose",
+        duration: "4 hours",
+        topics: ["NoSQL Database Concepts", "MongoDB CRUD Operations", "Mongoose Schema and Models", "Relationships and Population", "Aggregation Pipeline"]
+      },
+      {
+        title: "React.js Fundamentals",
+        duration: "5 hours",
+        topics: ["Components and JSX", "State and Props", "React Hooks", "Event Handling", "Conditional Rendering and Lists"]
+      },
+      {
+        title: "Advanced React",
+        duration: "4 hours",
+        topics: ["Context API and State Management", "React Router for Navigation", "Custom Hooks", "Form Handling and Validation", "API Integration with Axios"]
+      },
+      {
+        title: "Authentication and Security",
+        duration: "3 hours",
+        topics: ["JWT Authentication", "Bcrypt Password Hashing", "Protected Routes", "CORS and Security Headers", "OAuth Integration"]
+      },
+      {
+        title: "Real-time Features",
+        duration: "2 hours",
+        topics: ["WebSocket Basics", "Socket.io Implementation", "Real-time Notifications", "Chat Applications", "Live Data Updates"]
+      },
+      {
+        title: "Deployment and DevOps",
+        duration: "4 hours",
+        topics: ["Git and GitHub Workflows", "Environment Configuration", "Deploying to Heroku/Vercel", "MongoDB Atlas Setup", "CI/CD Basics", "Performance Optimization"]
+      }
+    ],
+    capstoneProjects: [
+      "Social Media Platform - Create a full-featured social network with posts, comments, likes, and real-time chat",
+      "Food Delivery App - Build an end-to-end food ordering system with restaurant management and order tracking"
+    ]
+  },
+  {
+    id: "python-full-stack",
+    title: "Python Full Stack Development",
+    description: "Comprehensive Python full-stack development with Django/Flask, REST APIs, and modern frontend frameworks.",
+    icon: "🐍",
+    color: "from-blue-500 to-green-600",
+    duration: "30 Hours",
+    level: "Beginner to Advanced",
+    objectives: [
+      "Master Python Programming and Django Framework",
+      "Build Scalable Web Applications with Django/Flask",
+      "Implement RESTful APIs with Django REST Framework",
+      "Work with PostgreSQL and Database Migrations",
+      "Deploy Python Applications to Cloud Platforms",
+      "Create Full Stack Projects with React Frontend"
+    ],
+    modules: [
+      {
+        title: "Python Fundamentals",
+        duration: "4 hours",
+        topics: ["Python Syntax and Data Types", "Functions and Modules", "OOP in Python", "File Handling", "Exception Handling", "List Comprehensions"]
+      },
+      {
+        title: "Django Framework Basics",
+        duration: "5 hours",
+        topics: ["Django Project Structure", "Models and Migrations", "Views and Templates", "Django ORM", "Forms and Validation", "Admin Interface"]
+      },
+      {
+        title: "Advanced Django",
+        duration: "4 hours",
+        topics: ["Class-Based Views", "Django REST Framework", "Authentication and Permissions", "Signals and Middleware", "Caching Strategies", "Background Tasks with Celery"]
+      },
+      {
+        title: "Database Management",
+        duration: "3 hours",
+        topics: ["PostgreSQL Basics", "Database Design", "Relationships and Queries", "Migrations and Schema Updates", "Database Optimization"]
+      },
+      {
+        title: "API Development",
+        duration: "4 hours",
+        topics: ["RESTful API Design", "Serializers and Viewsets", "API Authentication", "Pagination and Filtering", "API Documentation with Swagger", "Testing APIs"]
+      },
+      {
+        title: "Frontend Integration",
+        duration: "4 hours",
+        topics: ["HTML, CSS, and JavaScript Basics", "Bootstrap for Responsive Design", "React Basics for Django", "AJAX and Fetch API", "WebSocket Integration"]
+      },
+      {
+        title: "Flask Framework (Alternative)",
+        duration: "2 hours",
+        topics: ["Flask Application Structure", "Routes and Views", "Flask Extensions", "SQLAlchemy ORM", "Flask vs Django Comparison"]
+      },
+      {
+        title: "Deployment and Best Practices",
+        duration: "4 hours",
+        topics: ["Git Version Control", "Virtual Environments", "Docker Containerization", "Deploying to AWS/Heroku", "Nginx and Gunicorn", "Security Best Practices", "Performance Monitoring"]
+      }
+    ],
+    capstoneProjects: [
+      "Blog Platform with CMS - Build a complete blogging system with admin panel, user management, and rich text editing",
+      "Task Management Application - Develop a project management tool with team collaboration, real-time updates, and analytics"
+    ]
   }
 ];

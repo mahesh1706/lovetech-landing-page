@@ -11,7 +11,11 @@ interface CourseCardProps {
 const CourseCard = ({ course, index, onViewDetails }: CourseCardProps) => {
   return (
     <div
-      className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 hover:scale-[1.01] sm:hover:scale-[1.02] cursor-pointer group relative overflow-hidden w-full"
+      className={`bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 hover:scale-[1.01] sm:hover:scale-[1.02] cursor-pointer group relative overflow-hidden w-full border ${
+        index % 2 === 0 
+          ? 'border-brand-blue/20 hover:border-brand-blue/40 glow-soft' 
+          : 'border-brand-yellow/20 hover:border-brand-yellow/40 glow-yellow'
+      }`}
       data-aos="fade-up"
       data-aos-delay={index * 150}
       onClick={() => onViewDetails(course)}
