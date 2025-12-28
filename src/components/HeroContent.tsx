@@ -16,7 +16,7 @@ const HeroContent = () => {
           <TrendingUp className="w-4 h-4" />
           MSME Registered & Startup India Certified
         </div>
-        
+
         <h1 className="hero-heading text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
           Industry-Leading
           <span className="block text-blue-600 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
@@ -26,9 +26,9 @@ const HeroContent = () => {
             for Future-Ready Graduates
           </span>
         </h1>
-        
+
         <p className="hero-sub text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          We supply industry-grade trainers to upskill colleges and institutions, 
+          We supply industry-grade trainers to upskill colleges and institutions,
           creating tomorrow's tech leaders with cutting-edge expertise.
         </p>
       </div>
@@ -41,8 +41,8 @@ const HeroContent = () => {
           Start Your Journey
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
-        
-        <a 
+
+        <a
           href="#courses"
           onClick={(e) => {
             e.preventDefault();
@@ -66,7 +66,7 @@ const HeroContent = () => {
         </div>
         <div className="text-center lg:text-left">
           <div className="text-2xl lg:text-3xl font-bold text-blue-600 mb-1">
-            <span className="counter" data-target="9">0</span>+
+            <span className="counter" data-target="10">0</span>+
           </div>
           <div className="text-sm text-gray-600">Partner Colleges</div>
         </div>
